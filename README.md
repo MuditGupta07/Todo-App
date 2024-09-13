@@ -1,9 +1,10 @@
-ToDo List
+ToDo List:
 
 A simple ToDo List application built with HTML, CSS, and JavaScript. This app allows users to add tasks with a due date, view the list of tasks, and delete tasks. The tasks are stored in the browser's local storage to persist data between page reloads.
 
 
-Features
+
+Features:
 
 Add new tasks with a description and due date
 
@@ -14,7 +15,8 @@ Delete tasks from the list
 Data persistence using local storage
 
 
-Technologies Used
+
+Technologies Used:
 
 HTML
 
@@ -23,7 +25,8 @@ CSS
 JavaScript
 
 
-Usage
+
+Usage:
 
 Enter a task description in the "Enter Todo Here" input field.
 
