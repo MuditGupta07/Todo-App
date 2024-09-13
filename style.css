@@ -1,0 +1,93 @@
+*{
+    margin:0%;
+    padding:0%;
+    box-sizing: border-box;
+}
+
+html,body{
+    
+    height:100%;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: antiquewhite;
+    z-index: -2;
+}
+#main{
+    width: 600px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 5px 5px 40px 20px wheat;
+}
+#main img{
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    z-index: -1;
+}
+#head{
+    width: 200px;
+    height: 50px;
+    font-size: xx-large;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+#Input{
+    background-color: aquamarine;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#Info{
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    justify-content: center;
+}
+#Info input{
+    font-size: larger;
+}
+#add{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    font-size: x-large;
+    border-radius: 15%;
+    background-color: lightseagreen;
+}
+#output{
+    background-color: lightpink;
+    margin: 50px;
+    font-size: larger;
+    word-spacing: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 200px;
+    overflow-y: scroll;
+}
+#output button{
+    margin-bottom: 10px;
+    font-size: large;
+    border-radius: 10%;
+    background-color: orangered;
+}
+#output button:hover{
+    background-color: red;
+    font-weight: bolder;
+}
+#add:hover{
+    background-color: darkcyan;
+    font-weight: 600;
+}
