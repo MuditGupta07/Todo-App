@@ -4,21 +4,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Todo List</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Task Manager Pro</title>
 </head>
 <body>
-    <div id="main"><img src="bg img.jpg" alt="">
-        <div id="head">ToDo List</div>
-        <div id="Input">
-            <div id="Info">
-                <input id="text" type="text" placeholder="Enter Todo Here">
-                <input id="date" type="date">
+    <div class="container">
+        <header class="app-header">
+            <div class="header-content">
+                <h1><i class="fas fa-tasks"></i> Task Manager Pro</h1>
+                <p class="subtitle">Organize your tasks effortlessly</p>
             </div>
-            
-            <button id="add">Add</button>
-        </div>
-        <div id="output">
-        </div>
+        </header>
+
+        <main class="app-main">
+            <!-- Input Section -->
+            <section class="input-section">
+                <div class="input-card">
+                    <h2 class="section-title">Add New Task</h2>
+                    <form class="input-form" onsubmit="return false;">
+                        <div class="form-group">
+                            <input 
+                                id="taskInput" 
+                                type="text" 
+                                placeholder="Enter task description..." 
+                                class="form-input"
+                            >
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="dueDate" class="form-label">Due Date</label>
+                                <input 
+                                    id="dueDate" 
+                                    type="date" 
+                                    class="form-input"
+                                >
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="priority" class="form-label">Priority</label>
+                                <select id="priority" class="form-input priority-select">
+                                    <option value="low">Low</option>
+                                    <option value="medium" selected>Medium</option>
+                                    <option value="high">High</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <button type="button" id="addBtn" class="btn btn-primary">
+                            <i class="fas fa-plus"></i> Add Task
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Filter/Sort Section -->
+            <section class="filter-section">
+                <div class="filter-controls">
+                    <button id="sortByPriority" class="btn btn-filter active">
+                        <i class="fas fa-arrow-down-up"></i> Priority
+                    </button>
+                    <button id="sortByDate" class="btn btn-filter">
+                        <i class="fas fa-calendar"></i> Due Date
+                    </button>
+                    <button id="filterPending" class="btn btn-filter">
+                        <i class="fas fa-hourglass-start"></i> Pending
+                    </button>
+                    <button id="filterCompleted" class="btn btn-filter">
+                        <i class="fas fa-check-circle"></i> Completed
+                    </button>
+                </div>
+            </section>
+
+            <!-- Tasks Display Section -->
+            <section class="output-section">
+                <div class="tasks-header">
+                    <h2 class="section-title">Your Tasks</h2>
+                    <span id="taskCount" class="task-count">0 tasks</span>
+                </div>
+                <div id="taskOutput" class="tasks-container">
+                    <div class="empty-state">
+                        <i class="fas fa-inbox"></i>
+                        <p>No tasks yet. Add one to get started!</p>
+                    </div>
+                </div>
+            </section>
+        </main>
     </div>
 
     <script src="script.js"></script>
